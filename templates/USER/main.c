@@ -1,14 +1,23 @@
-#include "stm32f4xx.h"
-#include "usart.h"
+#include "sys.h"
 #include "delay.h"
-int main(void)
+#include "usart.h"
+
+#include "led.h"
+
+int main()
 {
-	u32 t=0;
-	uart_init(115200);
-	delay_init(84);
-	while(1){
-		printf("t:%d\r\n",t);
-		delay_ms(500);
-		t++;
+	delay_init(168);
+	LED_Init();
+	
+	while(1)
+	{
+		GPIO_ResetBits(GPIOF,GPIO_Pin_9 | GPIO_Pin_10);//LED¡¡
+		delay_ms(300);
+		GPIO_SetBits(GPIOF,GPIO_Pin_9 | GPIO_Pin_10);//LED¡¡
+		delay_ms(300);
 	}
+		
 }
+	
+
+	
