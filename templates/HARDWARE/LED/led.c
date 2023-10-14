@@ -20,10 +20,3 @@ void LED_Init()
     GPIO_SetBits(GPIOF,GPIO_Pin_9 | GPIO_Pin_10);//LEDÃð
 }
 
-//void led_ctrl()
-//{
-//	GPIO_ResetBits(GPIOF,GPIO_Pin_9);//LEDÁÁ
-//	delay_ms();
-//	GPIO_SetBits(GPIOF,GPIO_Pin_9);//LEDÁÁ
-//	delay_ms();	
-//}
