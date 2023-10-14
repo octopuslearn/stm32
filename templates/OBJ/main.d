@@ -1,7 +1,7 @@
 ..\obj\main.o: main.c
 ..\obj\main.o: stm32f4xx.h
 ..\obj\main.o: ..\CORE\core_cm4.h
-..\obj\main.o: D:\Installation_app\keil527\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\main.o: D:\Installation_app\keil538\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\main.o: ..\CORE\core_cmInstr.h
 ..\obj\main.o: ..\CORE\core_cmFunc.h
 ..\obj\main.o: ..\CORE\core_cm4_simd.h
@@ -34,3 +34,7 @@
 ..\obj\main.o: ..\FWLIB\inc\stm32f4xx_dac.h
 ..\obj\main.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 ..\obj\main.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
+..\obj\main.o: ..\SYSTEM\usart\usart.h
+..\obj\main.o: D:\Installation_app\keil538\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\main.o: ..\SYSTEM\sys\sys.h
+..\obj\main.o: ..\SYSTEM\delay\delay.h

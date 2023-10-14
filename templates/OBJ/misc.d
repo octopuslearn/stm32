@@ -2,7 +2,7 @@
 ..\obj\misc.o: ..\FWLIB\inc\misc.h
 ..\obj\misc.o: ..\USER\stm32f4xx.h
 ..\obj\misc.o: ..\CORE\core_cm4.h
-..\obj\misc.o: D:\Installation_app\keil527\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\misc.o: D:\Installation_app\keil538\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\misc.o: ..\CORE\core_cmInstr.h
 ..\obj\misc.o: ..\CORE\core_cmFunc.h
 ..\obj\misc.o: ..\CORE\core_cm4_simd.h
