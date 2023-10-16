@@ -17,6 +17,6 @@ KEY0---PE4
 #define KEY0 PEin(4)
 
 void BUTTON_Init(void);
-u8 BUTTON_Value(void);
+u8 BUTTON_Value(u8 mode);
 
 #endif 

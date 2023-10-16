@@ -42,9 +42,16 @@ void BUTTON_Init()
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 }
 
+
+
+
+
 //如此报错..\HARDWARE\BUTTON\button.c(38): warning: #940-D: missing return statement at end of non-void function "BUTTON_Value"
 //编译器在编译时不会管if else 中的return。如果程序最后没有return语句，则编译器认为错误。
-u8 BUTTON_Value()
+
+
+/*模式选择函数，1-支持连续按，0-不支持按*/
+u8 BUTTON_Value(u8 mode)
 {
 /*以下，支持连续按下*/
 /*	
@@ -66,6 +73,7 @@ u8 BUTTON_Value()
 
 	
 /*以下，不支持连续按下*/
+/*
 	static u8 key_up = 1;	//按键松开标志，弹起-1，按下-0
 	if(key_up==1 && (KEY2==0 || KEY1==0 || KEY0==0))	//有按键按下
 	{
@@ -80,7 +88,7 @@ u8 BUTTON_Value()
 		key_up = 1;	
 	}
 	return 0;	//无效值
-	
+*/	
 	
 	
 	
@@ -113,7 +121,33 @@ return 0;不能写在这，否则按下led的按键蜂鸣器也会响
 		return 0;	//无效值
 	}
 */
-//*/	
 
+
+
+
+
+/*同时支持连续和不支持连续按，可是mode有啥用？写1既可连续又可不连续，而写0直接无法使用---已经可以使用了*/
+/*???仍有问题，为什么---答理由已经找到，见下面，没有按键按下应该是弹起*/
+	static u8 key_up = 1;	//按键释放标志
+	if(mode==1)	//支持连续按
+	{
+		key_up = 1;
+	}
+
+	if(key_up && (KEY2==0 || KEY1==0 || KEY0==0))
+	{
+		delay_ms(50);
+		key_up = 0;
+		if(KEY2==0)	return 3;
+		else if(KEY1==0) return 2;
+		else if(KEY0==0) return 1;
+	}
+	else if(KEY2==1 && KEY1==1 && KEY0==1)
+	{
+/*这里错误，没有按键按下应该是1-弹起*/	
+//		key_up = 0;
+		key_up = 1;
+	}
+	return 0;
 }
 

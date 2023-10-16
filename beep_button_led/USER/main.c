@@ -18,14 +18,17 @@ int main()
 	
 	while(1)
 	{
-		BUTTON_Value_in = BUTTON_Value();
-		switch(BUTTON_Value_in)
+		BUTTON_Value_in = BUTTON_Value(1);
+		if(BUTTON_Value_in)
 		{
-			case 3:LED0 = !LED0;break;
-			case 2:LED1 = !LED1;break;
-			case 1:BEEP = !BEEP;break;
-			default:break;
-		}			
+			switch(BUTTON_Value_in)
+			{
+				case 3:LED0 = !LED0;break;
+				case 2:LED1 = !LED1;break;
+				case 1:BEEP = !BEEP;break;
+				default:break;
+			}			
+		}
 	}
 }
 
