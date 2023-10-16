@@ -10,12 +10,13 @@ KEY0---PE4
 #define _BUTTON_H
 
 #include "sys.h"                  // Device header
+ #include "delay.h"
  
-#define KEY2 GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_2)
-#define KEY1 GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_3)
-#define KEY0 GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_4)
+#define KEY2 PEin(2)
+#define KEY1 PEin(3)
+#define KEY0 PEin(4)
 
 void BUTTON_Init(void);
-int BUTTON_Value();
+u8 BUTTON_Value(void);
 
 #endif 

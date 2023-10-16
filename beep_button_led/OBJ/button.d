@@ -36,3 +36,4 @@
 ..\obj\button.o: ..\FWLIB\inc\stm32f4xx_dac.h
 ..\obj\button.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 ..\obj\button.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
+..\obj\button.o: ..\SYSTEM\delay\delay.h

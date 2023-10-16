@@ -9,6 +9,7 @@
 
 int main()
 {
+	u8 BUTTON_Value_in;
 	delay_init(168);
 	
 	LED_Init();
@@ -17,12 +18,12 @@ int main()
 	
 	while(1)
 	{
-		int BUTTON_Value = BUTTON_Value();
-		switch(BUTTON_Value)
+		BUTTON_Value_in = BUTTON_Value();
+		switch(BUTTON_Value_in)
 		{
-			case 0:LED0;break;
-			case 1:LED1;break;
-			case 2:BEEP();break;
+			case 3:LED0 = !LED0;break;
+			case 2:LED1 = !LED1;break;
+			case 1:BEEP = !BEEP;break;
 			default:break;
 		}			
 	}
