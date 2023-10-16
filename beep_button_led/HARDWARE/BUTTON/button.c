@@ -46,6 +46,8 @@ void BUTTON_Init()
 //编译器在编译时不会管if else 中的return。如果程序最后没有return语句，则编译器认为错误。
 u8 BUTTON_Value()
 {
+/*以下，支持连续按下*/
+/*	
 	if(KEY2==0 || KEY1==0 || KEY0==0)	//有按键按下
 	{
 		delay_ms(20);	//消抖
@@ -55,5 +57,63 @@ u8 BUTTON_Value()
 		else{}
 	}
 	return 0;	//无按键按下
+*/	
+
+
+
+
+
+
+	
+/*以下，不支持连续按下*/
+	static u8 key_up = 1;	//按键松开标志，弹起-1，按下-0
+	if(key_up==1 && (KEY2==0 || KEY1==0 || KEY0==0))	//有按键按下
+	{
+		key_up = 0;		//标记这次已经按下
+		delay_ms(50);	//消抖
+		if(KEY2==0)	return 3;
+		else if(KEY1==0) return 2;
+		else if(KEY0==0) return 1;
+	}
+	else if(KEY2==1 && KEY1==1 && KEY0==1)	//没有按键按下
+	{
+		key_up = 1;	
+	}
+	return 0;	//无效值
+	
+	
+	
+	
+	
+
+
+
+/*以下，不支持连续按下*/
+/*以下，有误	???暂且不知道原因
+	else if(KEY2==1 && KEY1==1 && KEY0==1)	//没有按键按下
+	{
+		key_up = 1;	
+		return 0;	//无效值
+	}
+return 0;不能写在这，否则按下led的按键蜂鸣器也会响
+*/
+/*
+	static u8 key_up = 1;	//按键松开标志，弹起-1，按下-0
+	if(key_up==1 && (KEY2==0 || KEY1==0 || KEY0==0))	//有按键按下
+	{
+		key_up = 0;		//标记这次已经按下
+		delay_ms(50);	//消抖
+		if(KEY2==0)	return 3;
+		else if(KEY1==0) return 2;
+		else if(KEY0==0) return 1;
+	}
+	else if(KEY2==1 && KEY1==1 && KEY0==1)	//没有按键按下
+	{
+		key_up = 1;	
+		return 0;	//无效值
+	}
+*/
+//*/	
+
 }
 
