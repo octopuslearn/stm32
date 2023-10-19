@@ -48,8 +48,8 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>..\OBJ\</OutputDirectory>
-          <OutputName>uart</OutputName>
+          <OutputDirectory>..\</OutputDirectory>
+          <OutputName>uart.axf</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -134,11 +134,11 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>-1</DriverSelection>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\FWLIB\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\CORE;..\SYSTEM\usart</IncludePath>
+              <IncludePath>..\USER;..\FWLIB\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\CORE;..\SYSTEM\usart;..\HARDWARE\usart_1.0</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -463,6 +463,13 @@
         </Group>
         <Group>
           <GroupName>HARDWARE</GroupName>
+          <Files>
+            <File>
+              <FileName>usart_1.0.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\usart_1.0\usart_1.0.c</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>
