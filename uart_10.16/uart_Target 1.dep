@@ -287,7 +287,7 @@ I (..\FWLIB\inc\stm32f4xx_dcmi.h)(0x53DBAFAD)
 I (..\FWLIB\inc\stm32f4xx_fsmc.h)(0x53DBAFAD)
 I (..\SYSTEM\usart\usart.h)(0x5710F391)
 I (D:\Installation_app\keil538\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
-F (.\main.c)(0x65312A32)(--gnu -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\FWLIB\inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\CORE -I ..\SYSTEM\usart -I ..\HARDWARE\usart_1.0-ID:\Installation_app\keil538_pack\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="538" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\main.o --omf_browse ..\main.crf --depend ..\main.d)
+F (.\main.c)(0x65312CB6)(--gnu -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\FWLIB\inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\CORE -I ..\SYSTEM\usart -I ..\HARDWARE\usart_1.0-ID:\Installation_app\keil538_pack\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="538" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\main.o --omf_browse ..\main.crf --depend ..\main.d)
 I (..\HARDWARE\usart_1.0\usart_1.0.h)(0x653126DA)
 I (..\USER\stm32f4xx.h)(0x652D27EF)
 I (..\CORE\core_cm4.h)(0x53C7D530)
@@ -396,7 +396,7 @@ I (..\FWLIB\inc\stm32f4xx_can.h)(0x53DBAFAD)
 I (..\FWLIB\inc\stm32f4xx_dac.h)(0x53DBAFAD)
 I (..\FWLIB\inc\stm32f4xx_dcmi.h)(0x53DBAFAD)
 I (..\FWLIB\inc\stm32f4xx_fsmc.h)(0x53DBAFAD)
-F (..\HARDWARE\usart_1.0\usart_1.0.c)(0x65312B45)(--gnu -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\FWLIB\inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\CORE -I ..\SYSTEM\usart -I ..\HARDWARE\usart_1.0-ID:\Installation_app\keil538_pack\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="538" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\usart_1.0.o --omf_browse ..\usart_1.0.crf --depend ..\usart_1.0.d)
+F (..\HARDWARE\usart_1.0\usart_1.0.c)(0x653341D2)(--gnu -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\FWLIB\inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\CORE -I ..\SYSTEM\usart -I ..\HARDWARE\usart_1.0-ID:\Installation_app\keil538_pack\Keil\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="538" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\usart_1.0.o --omf_browse ..\usart_1.0.crf --depend ..\usart_1.0.d)
 I (..\HARDWARE\usart_1.0\usart_1.0.h)(0x653126DA)
 I (..\USER\stm32f4xx.h)(0x652D27EF)
 I (..\CORE\core_cm4.h)(0x53C7D530)
